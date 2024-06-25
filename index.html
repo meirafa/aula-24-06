@@ -33,7 +33,7 @@
         name="email"
         id="email"
         placeholder="Digite seu e-mail"
-        required
+       required
       />
 
       <br />
@@ -81,7 +81,9 @@
       <fieldset>
         <legend>Filme</legend>
 
-        <input type="checkbox" name="filme" id="filme1" value="encantados" />
+        <input type="checkbox" name="filme" 
+        id="filme1" 
+        value="encantados" />
         <label for="filme1">encantados</label>
 
         <input
@@ -99,7 +101,8 @@
       <fieldset>
         <legend>Gênero:</legend>
 
-        <input type="radio" name="genero" id="masculino" value="masculino" />
+        <input type="radio"
+         name="genero" id="masculino" value="masculino" />
         <label for="masculino">Masculino</label>
 
         <input type="radio" name="genero" id="feminino" value="feminino" />
@@ -131,11 +134,10 @@
       <input
         name="cpf"
         id="cpf"
-        required
         type="text"
         minlength="11"
         maxlength="14"
-        pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+        pattern="\d{3}\.?\d{3}\.?\d{3}-/?\d{2}"
         placeholder="Digite seu CPF"
       />
 
