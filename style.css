@@ -1,0 +1,16 @@
+/*
+//atibuto
+[required]
+
+//começa com
+[href^="#"]
+
+//termina com
+[href$=".com"]
+
+//apenas o filho direto
+div > p
+
+//todos que vier após
+p + p
+*/

@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario</title>
+    <title>Formulário</title>
     <link rel="stylesheet" href="style.css" />
     <script async src="index.js"></script>
+    <script async src="validation.js"></script>
   </head>
   <body>
-    <form action="logado.html" method="get">
+    <!-- <form action="logado.html" method="post"> -->
+    <form action="logado.html" method="get" name="entrar" id="entrar">
       <label for="name_user">Nome do úsuario:</label>
       <input
         type="text"
-        name="name_user"
+        name="name"
         id="name_user"
         placeholder="Digite seu nome"
+        minlength="2"
       />
 
       <br />
 
       <label for="cor">Escolha uma cor:</label>
-      <input type="color" name="cor" id="cor" />
+      <input type="color" name="color" id="cor" />
 
       <br />
 
@@ -30,6 +33,7 @@
         name="email"
         id="email"
         placeholder="Digite seu e-mail"
+        required
       />
 
       <br />
@@ -54,65 +58,104 @@
 
       <br />
 
-      <label for="date">Data de hoje</label>
+      <label for="date">Data de hoje:</label>
       <input type="date" name="date" id="date" />
+
+      <br />
+
+      <label for="month">Escolha o mês:</label>
+      <input type="month" name="month" id="month" />
+
+      <br />
+
+      <label for="time">Horário:</label>
+      <input type="time" name="time" id="time" />
+
+      <br />
+
+      <label for="datetime">Data e Hora:</label>
+      <input type="datetime-local" name="datetime" id="datetime" />
 
       <br />
 
       <fieldset>
         <legend>Filme</legend>
+
         <input type="checkbox" name="filme" id="filme1" value="encantados" />
-        Encantados
+        <label for="filme1">encantados</label>
+
         <input
           type="checkbox"
           name="filme"
           id="filme2"
           value="divertidamente"
         />
-        Divertidamente
+        <label for="filme2">divertidamente</label>
+
         <input type="checkbox" name="filme" id="filme3" value="dormir2" />
-        Vontade de dormir 2
+        <label for="filme3">Vontade de dormir 2</label>
       </fieldset>
 
       <fieldset>
         <legend>Gênero:</legend>
-        <input type="radio" name="genero" id="branco" value="branco" />Branco
-        <input type="radio" name="genero" id="pardo" value="pardo" />Pardo
-        <input type="radio" name="genero" id="amarelo" value="amarelo" />Amarelo
-        <input type="radio" name="genero" id="negro" value="negro" />Negro
+
+        <input type="radio" name="genero" id="masculino" value="masculino" />
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" name="genero" id="feminino" value="feminino" />
+        <label for="feminino">Feminino</label>
       </fieldset>
       <br />
 
+      <label for="materia">Matérias:</label>
       <select name="materia" id="materia">
+        <option value="">Selecione uma matéria..</option>
         <option value="dispositivos">Dispositivos moveis</option>
         <option value="etica">Ética</option>
         <option value="informatica">Informatica</option>
       </select>
 
       <br />
-      <label for="mensagem">Duvida:</label>
+
+      <label for="mensagem">Dúvida:</label>
       <textarea
         name="mensagem"
         id="mensagem"
         maxlength="100"
-        placeholder="Digite sua duvida"
+        placeholder="Digite sua dúvida"
       ></textarea>
 
+      <br />
+      <!-- input com validação Regex - Expressão Regular-->
+      <label for="cpf">CPF:</label>
+      <input
+        name="cpf"
+        id="cpf"
+        required
+        type="text"
+        minlength="11"
+        maxlength="14"
+        pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+        placeholder="Digite seu CPF"
+      />
+
+      <br />
+
+      <label for="file">Envie seu arquivo:</label>
+      <input type="file" name="file" id="file" />
+
+      <br />
+
+      <label for="range">Selecione o intervalo:</label>
+      <input type="range" name="range" id="range" step="10" max="30" min="0" />
+
+      <br />
+
+      <!-- Maneiras de criar botão de formulário -->
       <button type="submit">Enviar</button>
       <input type="submit" value="Cadastrar" />
-    </form>
 
-    <form>
-      <!-- 
-        Criar formulário de 
-       Agendamento para Banho e Tosa 
-       com as seguintes informações:
-    Nome do Responsavel, Endereço (RUA), Cidade, Bairro, 
-    Estado, CEP, Telefone Res ou Celular, E-mail.
-
-    Nome do Animal, Raça do animal, idade, 
-    Digite alguma informação sobre o animal se necessário.
-    -->
+      <button type="reset">Resetar</button>
     </form>
   </body>
 </html>
