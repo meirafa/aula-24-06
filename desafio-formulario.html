@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Formulário</title>
+    <link rel="stylesheet" href="style.css" />
+    <script async src="index.js"></script>
+  </head>
+  <body>
+    <h1>Agendamento para Banho e Tosa</h1>
+    
+    <form action="agendamento.html" method="get">
+      <fieldset>
+        <legend>Dados do Responsavel</legend>
+
+        <label for="name_user">Nome:</label>
+        <input
+          type="text"
+          name="name_user"
+          id="name_user"
+          placeholder="Digite o seu nome"
+        />
+
+        <br />
+
+        <label for="cep_user">Cep:</label>
+        <input
+          type="number"
+          name="cep_user"
+          id="cep_user"
+          placeholder="Digite o CEP"
+        />
+
+        <br />
+
+        <label for="state_user">Estado:</label>
+        <input
+          type="text"
+          name="state_user"
+          id="state_user"
+          placeholder="Digite o seu estado"
+        />
+
+        <br />
+
+        <label for="city_user">Cidade:</label>
+        <input
+          type="text"
+          name="city_user"
+          id="city_user"
+          placeholder="Digite a sua cidade"
+        />
+
+        <br />
+
+        <label for="address_user">Endereço:</label>
+        <input
+          type="text"
+          name="address_user"
+          id="address_user"
+          placeholder="Digite o seu Endereço"
+        />
+
+        <br />
+
+        <label for="phone_user">Celular ou telefone:</label>
+        <input
+          type="number"
+          name="phone_user"
+          id="phone_user"
+          placeholder="Digite o seu telefone"
+        />
+
+        <br />
+
+        <label for="email_user">E-mail:</label>
+        <input
+          type="email"
+          name="email_user"
+          id="email_user"
+          placeholder="Digite seu e-mail"
+        />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Dados do Animal</legend>
+
+        <label for="name_animal">Nome do Animal:</label>
+        <input
+          type="text"
+          name="name_animal"
+          id="name_animal"
+          placeholder="Digite o nome do animal"
+        />
+
+        <br />
+
+        <label for="race_animal">Raça do Animal:</label>
+        <input
+          type="text"
+          name="race_animal"
+          id="race_animal"
+          placeholder="Digite a raça do animal"
+        />
+
+        <br />
+
+        <label for="age_animal">Idade do Animal:</label>
+        <input
+          type="number"
+          name="age_animal"
+          id="age_animal"
+          placeholder="Digite a idade do animal"
+        />
+
+        <br />
+
+        <label for="message">
+          Digite alguma informação sobre o animal, se necessário:
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          maxlength="100"
+          placeholder="Digite informaçoes extras"
+        ></textarea>
+      </fieldset>
+
+      <br />
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
